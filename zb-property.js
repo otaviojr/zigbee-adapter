@@ -438,7 +438,7 @@ class ZigbeeProperty extends Property {
     // 1 - Locked
     // 2 - Unlocked
     // We're currently usiong a boolean.
-    const propertyValue = attrEntry.attrData != 2;
+    const propertyValue = attrEntry.attrData == 1;
     return [
       propertyValue,
       `${(propertyValue ? 'locked' : 'unlocked')} (${attrEntry.attrData})`,
